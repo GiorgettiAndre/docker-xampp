@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<head>
+    <title>Registrazione censimenti scout</title>
+    
+    <!--CSS impostazioni per la lo stile in file esterno--> 
+    <link rel="stylesheet" href="stile.css">
+
+    <!--sorgente JavaScript-->
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <!--titolo visivo-->
+        <h1>IIS Marconi Pieralisi</h1>
+        <nav><!--una sezione dedicata ad una lista di link-->
+            <!--lista puntata delle materie-->
+            <ul>
+                <li><a href="">Informatica</a></li>
+                <li><a href="">Sistemi e Reti</a></li>
+                <li><a href="">GPOI</a></li>
+                <li><a href="">TPSIT</a></li>
+                <li><a href="">Intelligenza artificiale</a></li>
+                <li><a href="">Scienze Motorie</a></li>
+                <li><a href="">Storia</a></li>
+                <li><a href="">Italiano</a></li>
+                <li><a href="">Religione</a></li>
+                <li><a href="">Inglese</a></li>
+                <li><a href="">Matematica</a></li>
+                <li><a href="index.html">Pagina Principale</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1 id="titolo">Registrati al nostro gruppo scout!</h1>
+
+    <section>
+        <form name="login">
+            <label for="Nome">Nome:</label><br>
+            <input type="text" id="Nome" name="nome" value="" placeholder="Inserisci il tuo nome">
+            <br>
+            
+            <label for="Cognome">Cognome:</label><br>
+            <input type="text" id="Cognome" name="cognome" value="" placeholder="Inserisci il tuo cognome">
+            <br>
+
+            <label for="Username">Username:</label><br>
+            <input type="text" id="Username" name="username" value="" placeholder="Inserisci il tuo username">
+            <br>
+            
+            <label for="Email">Email:</label><br>
+            <input type="email" id="Email" name="email" value="" placeholder="Inserisci la tua email">
+            <br>
+
+            <label for="Password">Password:</label><br>
+            <input type="password" id="Password" name="password" value="" placeholder="Inserisci la tua password">
+            <br>
+
+            <label for="Telefono">Telefono:</label><br>
+            <input type="text" id="Telefono" name="telefono" value="" placeholder="Inserisci il tuo numero di telefono">
+            <br><br>
+
+            <label for="Residenza">Città di residenza:</label><br>
+            <select id="Residenza" name="residenza">
+                <option value="Ancona">Ancona</option>
+                <option value="Roma">Roma</option>
+                <option value="Staffolo">Staffolo</option>
+                <option value="Jesi">Jesi</option>
+                <option value="Chiaravalle">Chiaravalle</option>
+            </select>
+            <br>
+
+            <label for="ViaResidenza">ViaResidenza:</label><br>
+            <input type="text" id="ViaResidenza" name="viaResidenza" value="" placeholder="Inserisci la tua via di casa">
+            <br>
+
+            <label for="Cap">Cap residenza:</label><br>
+            <input type="text" id="Cap" name="cap" value="" placeholder="Inserisci il codice CAP della tua citta' di residenza">
+            <br><br>
+
+            <label>Genere:</label><br>
+            <input type="radio" id="Maschile" name="genere" value="maschile">
+            <label for="maschile">Maschile</label>
+            <br>
+            <input type="radio" id="Femminile" name="genere" value="femminile">
+            <label for="femminile">Femminile</label>
+            <br><br>
+
+            <label for="DataNascita">Data di nascita</label><br>
+            <input type="date" id="DataNascita" name="dataNascita">
+            <br>
+
+            <label for="LuogoNascita">Luogo di nascita:</label><br>
+            <input type="text" id="LuogoNascita" name="luogoNascita" value="" placeholder="Inserisci il luogo di nascita">
+            <br><br>
+
+            <br><br>
+            <input type="button" value="Login" onclick="convalidaDati()">
+        </form>
+    </section>
+
+    <footer>
+        <p>
+           Indirizzo
+           Via Raffaello Sanzio, 8
+           60035 - JESI (AN)
+        </p>
+      </footer>
+</body>
+</html>

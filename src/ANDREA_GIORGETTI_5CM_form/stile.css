@@ -1,0 +1,143 @@
+th, td
+{
+    padding: 1em; /*lo spazio tra il contenuto e il bordo di una cella di 1em, ossia i pixel di un carattere del font usato(se 1 carattere fosse 5px allora 1em è 5px)*/
+    width: fit-content; /*ogni tag si ridimensiona in base al contenuto+padding, non di più*/
+    border: 2px solid black; /*stile del bordo: larghezza, stile(in questo caso lineare), colore*/
+    border-collapse: collapse; /*fa si che ogni cella si uniscono i bordi, evitando di fare doppi bordi*/
+    text-align: center; /* Allinea il testo al centro orizzontalmente */
+}
+.cellavuota
+{
+    border: 2px solid white;
+}
+
+img
+{ 
+    width: 35%;
+    height: 35%;
+}
+
+header
+{
+    background-color: blue;
+    color: white;/*colore del testo*/
+    text-align: center;
+}
+header h1
+{
+    margin: auto;
+}
+
+footer
+{
+    background-color: blue;
+    color: white;
+}
+
+nav
+{
+    background-color: aqua;
+    text-align: center;
+    color: black;
+}
+nav ul /* gli "ul" dentro "nav" */
+{
+    list-style-type: none;
+    display: inline-flex; /* mette il contenuto in linea */
+}
+nav li
+{
+    padding: 5px;
+}
+nav a
+{
+    color: black;
+    text-decoration: none;
+}
+nav a:hover
+{
+    text-decoration: red underline !important;
+}
+
+
+footer a, footer p
+{
+    color: white;
+    padding: 1em;
+}
+
+form
+{
+    padding: 2em;
+}
+
+body
+{
+    margin: auto;
+}
+
+
+/*
+padding: spazio tra contenuto e il bordo del contenitore
+margin:     "    "  bordo e l'esterno
+*/
+
+/* le classi su css, da poi poter assegnare a specifici tag */
+.inf
+{
+    background-color: blue;
+}
+.sr
+{
+    background-color: red;
+}
+.gpoi
+{
+    background-color: chocolate;
+}
+.tpsit
+{
+    background-color: chartreuse;
+}
+.ia
+{
+    background-color: coral;
+}
+.sm
+{
+    background-color: cornflowerblue;
+}
+.st
+{
+    background-color: aqua;
+}
+.ita
+{
+    background-color: crimson;
+}
+.rel
+{
+    background-color: darkolivegreen ;
+}
+.ing
+{
+    background-color: brown ;
+}
+.mate
+{
+    background-color: pink ;
+}
+.recpot
+{
+    background-color: black;
+    color: white;
+}
+
+
+/* stile applicato a coloro che hanno come id i seguenti nomi */
+#titolo
+{
+    text-align: center;
+    text-decoration-line: overline underline; /* mette una linea sopra il contenuto */
+    text-decoration-color: red;   /* mette il colore alla linea soprastante */
+}
