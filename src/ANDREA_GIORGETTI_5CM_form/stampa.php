@@ -4,8 +4,8 @@
     </head>
     <body>
         <?php
-            $dati_post = array();
-            $dati_get = array();
+            $dati_post = [" "];
+            $dati_get = [" "];
 
             if(isset($_POST["password"]))
                 $_POST["password"] = md5($_POST["password"]); //eseguo l'hash della password 
