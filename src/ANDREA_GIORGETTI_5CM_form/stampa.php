@@ -18,6 +18,8 @@ if(isset($_SERVER["REQUEST_METHOD"]) && $_SERVER["REQUEST_METHOD"] == "POST")
             for($i = 0; $i < count($dati); $i++)
                 echo $_POST[$dati[$i]] . "<br>";
         }
+        echo "<br><br>";
+        
         ?>
     </body>
 </html>
