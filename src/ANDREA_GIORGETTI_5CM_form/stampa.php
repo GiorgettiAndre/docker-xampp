@@ -1,9 +1,16 @@
 <?php
-$dati = array();
-if(isset($_SERVER["REQUEST_METHOD"]) && $_SERVER["REQUEST_METHOD"] == "POST")
+$dati_post = array();
+$dati_get = array();
+
+if(isset($_POST["password"]))
+    $_POST["password"] = md5($_POST["password"]); //eseguo l'hash della password 
+
+if(isset($_SERVER["REQUEST_METHOD"]))
 {
-    $dati = ["username", "email", "password", "nome", "cognome", "telefono", "residenza", "viaResidenza", "cap", "genere", "dataNascita", "luogoNascita"];
-    $_POST["password"] = md5($_POST["password"]); //eseguo l'hash della password
+    if($_SERVER["REQUEST_METHOD"] == "POST")
+        $dati_post = ["username", "email", "password", "nome", "cognome", "telefono", "residenza", "viaResidenza", "cap", "genere", "dataNascita", "luogoNascita"];
+    else if($_SERVER["REQUEST_METHOD"] == "GET")
+        $dati_get = ["search"];
 }
 ?>
 
@@ -13,13 +20,13 @@ if(isset($_SERVER["REQUEST_METHOD"]) && $_SERVER["REQUEST_METHOD"] == "POST")
     </head>
     <body>
         <?php
-        if(isset($_SERVER["REQUEST_METHOD"]) && $_SERVER["REQUEST_METHOD"] == "POST")
-        {
-            for($i = 0; $i < count($dati); $i++)
-                echo $_POST[$dati[$i]] . "<br>";
-        }
-        echo "<br><br>";
+        for($i = 0; $i < count($dati_post); $i++)
+            echo $i+1 .')'. $_POST[$dati_post[$i]] . "<br>";
         
+        echo "<br><br>";
+
+        for($i = 0; $i < count($dati_get); $i++)
+            echo $i+1 .')'. $_GET[$dati_get[$i]] . "<br>";
         ?>
     </body>
 </html>
