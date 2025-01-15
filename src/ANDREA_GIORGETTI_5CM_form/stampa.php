@@ -26,7 +26,7 @@ if(isset($_SERVER["REQUEST_METHOD"]))
         echo "<br><br>";
 
         for($i = 0; $i < count($dati_get); $i++)
-            echo $i+1 .')'. $_GET[$dati_get[$i]] . "<br>";
+            echo $i+1 .') '. $_GET[$dati_get[$i]] . "<br>";
         ?>
     </body>
 </html>
