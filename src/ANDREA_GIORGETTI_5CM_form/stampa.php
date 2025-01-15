@@ -21,7 +21,7 @@ if(isset($_SERVER["REQUEST_METHOD"]))
     <body>
         <?php
         for($i = 0; $i < count($dati_post); $i++)
-            echo $i+1 .')'. $_POST[$dati_post[$i]] . "<br>";
+            echo $i+1 .') '. $_POST[$dati_post[$i]] . "<br>";
         
         echo "<br><br>";
 
