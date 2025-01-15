@@ -32,13 +32,13 @@
             for($i = 0; $i < count($dati_get); $i++)
                 echo $i+1 .') '. $_GET[$dati_get[$i]] . "<br>";
 
-            echo "print_r di post e get";
-            print_r($dati_post);
-            print_r($dati_get);
-            echo "<br>";
-            echo "var_dump di post e get";
-            var_dump($dati_post);
-            var_dump($dati_get);
+            echo "print_r di post e get"; echo "<br>";
+            print_r($dati_post); echo "<br>";
+            print_r($dati_get); echo "<br>";
+            echo "<br>";echo "<br>";
+            echo "var_dump di post e get"; echo "<br>";
+            var_dump($dati_post); echo "<br>";
+            var_dump($dati_get); echo "<br>";
         ?>
     </body>
 </html>
