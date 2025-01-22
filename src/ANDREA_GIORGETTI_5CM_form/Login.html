@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<head>
+    <title>Registrazione censimenti scout</title>
+    
+    <!--CSS impostazioni per la lo stile in file esterno--> 
+    <link rel="stylesheet" href="stile.css">
+
+    <!--sorgente JavaScript-->
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <!--titolo visivo-->
+        <h1>IIS Marconi Pieralisi</h1>
+        <nav><!--una sezione dedicata ad una lista di link-->
+            <!--lista puntata delle materie-->
+            <ul>
+                <li><a href="">Informatica</a></li>
+                <li><a href="">Sistemi e Reti</a></li>
+                <li><a href="">GPOI</a></li>
+                <li><a href="">TPSIT</a></li>
+                <li><a href="">Intelligenza artificiale</a></li>
+                <li><a href="">Scienze Motorie</a></li>
+                <li><a href="">Storia</a></li>
+                <li><a href="">Italiano</a></li>
+                <li><a href="">Religione</a></li>
+                <li><a href="">Inglese</a></li>
+                <li><a href="">Matematica</a></li>
+                <li><a href="index.html">Pagina Principale</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1 id="titolo">Accedi al nostro gruppo scout!</h1>
+
+    <section>
+        <form name="signin" action="stampa.php" method="post">
+            <label for="Username">Username:</label><br>
+            <input type="text" id="Username" name="username" value="" placeholder="Inserisci il tuo username">
+            <br>
+            
+            <label for="Email">Email:</label><br>
+            <input type="email" id="Email" name="email" value="" placeholder="Inserisci la tua email">
+            <br>
+
+            <label for="Password">Password:</label><br>
+            <input type="password" id="Password" name="password" value="" placeholder="Inserisci la tua password">
+            <br><br>
+            
+            <input type="submit" name="submit" value="Sing in">
+        </form>
+    </section>
+
+    <footer>
+        <p>
+           Indirizzo
+           Via Raffaello Sanzio, 8
+           60035 - JESI (AN)
+        </p>
+      </footer>
+</body>
+</html>
