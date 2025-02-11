@@ -33,7 +33,7 @@
         </nav>
     </header>
 
-    <h1 id="titolo">Cerca una tabella!</h1>
+    <h1 id="titolo">Risultato Search!</h1>
 
     <section>
         <?php
