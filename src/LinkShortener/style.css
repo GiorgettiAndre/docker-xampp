@@ -1,0 +1,46 @@
+table /* stile applicato alla tabella */
+{
+    width: 70%; /* Imposta la larghezza della tabella a 70% della larghezza della pagina */
+    border-collapse: collapse; /* nelle celle coi bordi vicini essi verranno fusi */
+    font-family: Arial, sans-serif; /* Imposta la font-family a Arial */
+    font-size: 16px; /* Imposta la font-size a 16px */
+}
+
+th, td /* stile applicato ai titoli e ai contenuti della tabella */
+{
+    border: 1px solid black; /* Aggiunge un bordo nero al contorno delle celle */
+    padding: 8px; /* Aggiunge 8 pixel di spazio interno tra il contenuto della cella e il suo bordo */
+    text-align: left; /* Allinea il testo a sinistra all'interno delle celle */
+}
+
+th /* stile applicato al titolo della tabella */
+{
+    background-color: #4CAF50; /* Imposta il colore di sfondo del titolo a verde */
+    color: white; /* Imposta il colore del testo del titolo a bianco */
+    text-transform: uppercase; /* Converte il testo del titolo in maiuscolo */
+}
+
+tr:nth-child(even) /* stile applicato alle righe di indice pari */
+{ background-color: #f2f2f2; /* Imposta il colore di sfondo delle righe di indice pari a grigio */ }
+
+td:hover /* stile applicato quando il mouse passa sopra una riga */
+{ background-color: #ddd; }
+
+#table-short_link { width: 49%; cursor: text; }
+
+#table-original_link { width: 49%; }
+
+#table-visits { width: 2%; text-align: center;}
+
+.centrale
+{
+    display: flex; /* flette l'elemento verticalemente */
+    justify-content: center; /* Centra l'elemento */
+}
+
+.dashboard-title
+{
+    margin-left: 15%; /* sposta il titolo da sinistra */
+    margin-top: 3%; /* sposta il titolo dall'alto */
+    font-size: 24px; /* Imposta la font-size a 24px */
+}

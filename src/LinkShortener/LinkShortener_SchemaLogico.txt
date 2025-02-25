@@ -1,0 +1,5 @@
+User(PK(user_name), user_pw)
+Link(PK(short_link), original_link, FK(user_name), n_visits)
+
+
+il link shortato sarà l'md5 tra l'username e il link originale
