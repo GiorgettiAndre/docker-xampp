@@ -1,6 +1,6 @@
 <?php
 require_once "controls.php";
-require_once "l.php";
+require_once "dbconn.php";
 require_once "db_constants.php";
 ?>
 
@@ -35,7 +35,9 @@ require_once "db_constants.php";
     <br>
 
     <?php
-    $links = LinksOf($_COOKIE["user_name"]);
+    //prende i link dell'utente corrente
+    $links = $conn->query("SELECT L.short_link, L.original_link, L.n_visits FROM link L WHERE L.user_name = '".htmlspecialchars($_COOKIE["user_name"])."';");
+    
     if($links->num_rows>0)
     {
         echo "<h2 class=\"dashboard-title\">Ciao ".$_COOKIE["user_name"]."! Ecco i tuoi Links: </h2>";
@@ -49,7 +51,7 @@ require_once "db_constants.php";
             <th> Visits </th>
         </tr>";
 
-        //stampo contenuto della tabella
+        //stampo contenuto della tabella dei link associati all'utente
         while ($row = $links->fetch_assoc())
         {
             echo "<tr>";

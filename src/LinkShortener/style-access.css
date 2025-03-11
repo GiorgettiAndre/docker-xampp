@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: grey;
+    background-color: cyan;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,7 +28,7 @@ label {
 }
 
 input[type="text"], input[type="password"] {
-    width: 100%;
+    width: 80%;
     padding: 8px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
