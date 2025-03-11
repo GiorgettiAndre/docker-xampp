@@ -3,7 +3,7 @@
 if(isset($_GET['dir']))
 {
     $dir = $_GET['dir'];
-    header("Location: $dir/index");
+    header("Location: $dir");
 }
 else if(isset($_GET['file']))
 {
@@ -23,7 +23,7 @@ else if(isset($_GET['file']))
             $files = scandir('./');
             foreach ($files as $file)
             {
-                if ($file !== '.' && $file !== '..')
+                if ($file !== '.' && $file !== '..' && $file !== 'index.php' && $file !== '.htaccess')
                 {
                     if (is_dir('./' . $file))
                         echo "<input type=\"submit\" name=\"dir\" value=\"$file\">";

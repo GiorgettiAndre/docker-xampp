@@ -1,19 +1,21 @@
 <?php
 if(isset($_SERVER["REQUEST_METHOD"]) && $_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["pag"]))
 {
+    $pag = htmlspecialchars($_POST["pag"]);
+
     require_once "dbconn.php";
     require_once "db_constants.php";
     
     if(isset($_POST["user_name"]) && isset($_POST["user_pw"]))
     {
-        $user_name = $_POST["user_name"];
-        $user_pw = md5($_POST["user_pw"]);
+        $user_name = htmlspecialchars($_POST["user_name"]);
+        $user_pw = md5(htmlspecialchars($_POST["user_pw"]));
     }
 
-    if($_POST["pag"] == "Create link")
+    if($pag == "Create link")
     {
-        $original_link = $_POST["original_link"];
-        $user_name = $_COOKIE["user_name"];
+        $original_link = htmlspecialchars($_POST["original_link"]);
+        $user_name = htmlspecialchars($_COOKIE["user_name"]);
         $short_link = md5($user_name . $original_link);
 
         $res = $conn->query("SELECT * FROM link WHERE short_link = '$short_link';");
@@ -25,7 +27,7 @@ if(isset($_SERVER["REQUEST_METHOD"]) && $_SERVER["REQUEST_METHOD"] == "POST" && 
             header("Location: dashboard.php");
         }
     }
-    else if($_POST["pag"] == "Login")
+    else if($pag == "Login")
     {
         $res = $conn->query("SELECT * FROM user_account WHERE user_name = '$user_name';");
         if($res->num_rows == 0)
@@ -43,9 +45,9 @@ if(isset($_SERVER["REQUEST_METHOD"]) && $_SERVER["REQUEST_METHOD"] == "POST" && 
             }
         }
     }
-    else if($_POST["pag"] == "Sign in")
+    else if($pag == "Sign in")
     {
-        $confirm_user_pw = md5($_POST["confirm_user_pw"]);
+        $confirm_user_pw = md5(htmlspecialchars($_POST["confirm_user_pw"]));
         if($user_pw != $confirm_user_pw)
             header("Location: sign_in.php?db_result=" . WrongConfirmPW);
         else

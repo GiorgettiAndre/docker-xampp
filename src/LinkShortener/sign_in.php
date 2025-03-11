@@ -5,6 +5,7 @@ require_once "db_constants.php";
 <html>
 <head>
     <title>Sing in</title>
+    <link rel="stylesheet" href="style-access.css">
 </head>
 <body>
 
@@ -32,7 +33,7 @@ require_once "db_constants.php";
 
         <input type="submit" name="pag" id="pag" value="Sign in">
         
-        <a href="login.php">Accedi</a>
+        <a href="login.php">Hai già un account? Accedi</a>
     </form>
     
 </body>

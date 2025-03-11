@@ -4,6 +4,7 @@ require_once "db_constants.php";
 <!DOCTYPE html>
 <head>
     <title>Login</title>
+    <link rel="stylesheet" href="style-access.css">
 </head>
 <body>
     
@@ -28,7 +29,7 @@ require_once "db_constants.php";
 
         <input type="submit" name="pag" id="pag" value="Login">
 
-        <a href="sign_in.php">Crea un account</a>
+        <a href="sign_in.php">Non hai un account? Crealo</a>
     </form>
 
 </body>
