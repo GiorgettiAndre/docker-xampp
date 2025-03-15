@@ -51,12 +51,14 @@ require_once "db_constants.php";
             <th> Visits </th>
         </tr>";
 
+
+        $domain = "https://3000-idx-docker-xamppgit-1736234872817.cluster-23wp6v3w4jhzmwncf7crloq3kw.cloudworkstations.dev/LinkShortener/?l=";
         //stampo contenuto della tabella dei link associati all'utente
         while ($row = $links->fetch_assoc())
         {
             echo "<tr>";
             
-            $short_link = "https://3000-idx-docker-xamppgit-1736234872817.cluster-23wp6v3w4jhzmwncf7crloq3kw.cloudworkstations.dev/LinkShortener/?link=".$row["short_link"];
+            $short_link = $domain . $row["short_link"];
             $original_link = $row["original_link"];
             $visits = $row["n_visits"];
 

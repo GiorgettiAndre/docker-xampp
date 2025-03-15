@@ -1,9 +1,6 @@
-body form {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    text-align: left;
+body {
+    font-family: Arial, sans-serif;
+    background-color: ghostwhite;
 }
 
 table /* stile applicato alla tabella */
@@ -52,3 +49,58 @@ td:hover /* stile applicato quando il mouse passa sopra una riga */
     margin-top: 3%; /* sposta il titolo dall'alto */
     font-size: 24px; /* Imposta la font-size a 24px */
 }
+
+
+body form {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: left;
+    width: 30%;
+}
+
+form h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+form input[type="text"], input[type="password"] {
+    width: 80%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form input[type="submit"] {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+form input[type="submit"]:hover {
+    background: #0056b3;
+}
+
+a {
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #007bff;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #0056b3;
+} 

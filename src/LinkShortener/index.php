@@ -1,9 +1,9 @@
 <?php
-if(isset($_SERVER["REQUEST_METHOD"]) && $_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["link"]))
+if(isset($_SERVER["REQUEST_METHOD"]) && $_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["l"]))
 { 
     require_once "dbconn.php";
 
-    $short_link = htmlspecialchars($_GET["link"]);
+    $short_link = htmlspecialchars($_GET["l"]);
     $res = $conn->query("SELECT original_link, n_visits FROM link L WHERE L.short_link = '$short_link';");
     if($res->num_rows === 0)
         echo "<h1>Questo link non esiste</h1>";
