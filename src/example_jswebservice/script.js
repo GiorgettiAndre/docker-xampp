@@ -1,6 +1,6 @@
 async function getData()
 {
-    const url = "https://3000-idx-docker-xamppgit-1736234872817.cluster-23wp6v3w4jhzmwncf7crloq3kw.cloudworkstations.dev/example_jswebservice/json-sender.php";
+    const url = "https://3000-idx-docker-xamppgit-1743577861873.cluster-rcyheetymngt4qx5fpswua3ry4.cloudworkstations.dev/example_jswebservice/json-sender.php";
     try
     {
         const response = await fetch(url);
