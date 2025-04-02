@@ -14,7 +14,7 @@ CREATE TABLE user_account
 CREATE TABLE link
 (
     short_link VARCHAR(40) PRIMARY KEY,
-    original_link VARCHAR(100) NOT NULL,
+    original_link VARCHAR(255) NOT NULL,
     user_name VARCHAR(40) NOT NULL,
     n_visits INT NOT NULL DEFAULT 0,
 
