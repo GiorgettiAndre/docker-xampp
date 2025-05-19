@@ -44,7 +44,7 @@ if(isset($_SERVER["REQUEST_METHOD"]) && $_SERVER["REQUEST_METHOD"] == "POST")
         else
             echo '<h2>Login</h2>';
         ?>
-        <form action="<?php echo $filename ?>" method="post">
+        <form action="login.php" method="post">
             <div class="form-group">
                 <?php
                 if($res == Database["UsernameDoesntExists"])

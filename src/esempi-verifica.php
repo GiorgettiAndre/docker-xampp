@@ -3,16 +3,14 @@ if (isset($_COOKIE['visite']))
     $visite = $_COOKIE['visite'] + 1;
 else
     $visite = 1;
-
 setcookie('visite', $visite, time());
-
 echo "Hai visitato questa pagina " . $visite . " volte.";
 
 
 
+file_put_contents("miofile.txt",'hellew');
 $dati = file_get_contents("miofile.txt");
 file_put_contents("miofile.txt", $dati . 'esempio bla bal abla.');
-
 
 
 $handle = fopen("esempio2.txt", "w");
@@ -38,4 +36,3 @@ fclose($handle);
     "r+" → lettura/scrittura
     "a+" → lettura/scrittura in fondo
 */
-?>
