@@ -3,7 +3,10 @@
 if(isset($_GET['dir']))
 {
     $dir = $_GET['dir'];
-    header("Location: $dir");
+    if($dir === "5CM-Giorgetti-Andrea")
+        header("Location: 5CM-Giorgetti-Andrea/PaginaPrincipale.html");
+    else
+        header("Location: $dir");
 }
 else if(isset($_GET['file']))
 {
