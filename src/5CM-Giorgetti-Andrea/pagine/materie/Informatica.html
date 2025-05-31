@@ -1,0 +1,104 @@
+<html>
+    <head>
+        <title>Informatica</title>
+        
+        <!-- Prism.js per evidenziazione della sintassi -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-php.min.js"></script>
+    </head>
+    <body>
+        <a href="../../PaginaPrincipale.html">home</a>
+        <h1>Informatica</h1>
+        <p>
+            L'argomento principale affrontato quest'anno è stato lo sviluppo web, e il tassello più importante che completa il programma è stato sicuramente il tema delle      <br>
+            web service, ovvero le API che scambiano dati in formato JSON utilizzando il protocollo HTTP.                                                                       <br>
+            Ritengo questo argomento fondamentale perché ormai la maggior parte dei servizi su internet funziona proprio tramite API: si tratta di un metodo estremamente       <br>
+            flessibile per fornire e ricevere dati, in quanto può essere utilizzato da qualsiasi dispositivo o linguaggio di programmazione, incluso JavaScript all'interno     <br>
+            delle pagine web.                                                                                                                                                   <br>
+                                                                                                                                                                                <br>
+            Ho inoltre imparato a creare percorsi URL personalizzati (routing), con nomi e parametri specifici che vengono associati a funzioni PHP predefinite. Questo sistema <br>
+            permette di nascondere la struttura reale dei file del sito e migliorare la sicurezza.                                                                              <br>
+            Per ottenere ciò, bisogna configurare il server in modo che tutte le richieste passino attraverso un unico punto di accesso, il file <code>index.php</code>. Tutte le altre risorse   <br>
+            vengono bloccate a livello di accesso diretto. Di seguito mostro il codice centrale che gestisce queste richieste:
+        
+            <details>
+            <summary>Mappatura rotte</summary>
+            <pre><code class="language-php">
+&lt;?php
+require_once '../app/router.php';
+// 'uri' =&gt; 'funzione'
+$routes = [
+    'GET' =&gt; [
+        '/api/articoli' =&gt; 'gestisci_elenco_articoli',
+        '/api/articoli/{categoria}' =&gt; 'gestisci_articoli_per_categoria',
+        '/api/articoli/{categoria}/{sottocategoria}' =&gt; 'gestisci_articoli_per_sottocategoria',
+        '/api/articoli/{categoria}/{sottocategoria}/{slug}' =&gt; 'gestisci_articolo',
+    ],
+    'POST' =&gt; [
+        '/api/auth' =&gt; 'gestisci_autenticazione',
+        '/api/articoli' =&gt; 'crea_articolo',
+        '/api/signup' =&gt; 'gestisci_signup',
+        '/api/login' =&gt; 'gestisci_login',
+    ],
+    'PUT' =&gt; [
+    ],
+    'DELETE' =&gt; [
+        '/api/articoli/{categoria}/{sottocategoria}/{slug}' =&gt; 'elimina_articolo'
+    ]
+];
+
+$uri = $_SERVER['REQUEST_URI'];
+$method = $_SERVER['REQUEST_METHOD'];
+
+router($method, $uri, $routes);
+            </code></pre>
+            </details>
+            <br>
+            Dalla richiesta fatta all'api si puo' estrapolare il percorso e il metodo scelto(<code>$uri</code> e <code>$method</code>), e tramite la funzione nell'ultima riga <code>router()</code> (inclusa all'inizio dal file <code>router.php</code>) <br>
+            riconosce il percorso e i vari parametri per poi andare alla funzione associata passandogli i valori necessari:                                                                                                                 <br>
+
+            <details>
+            <summary>Visualizza la funzione router()</summary>
+            <pre><code class="language-php">
+function router($method, $uri, $routes) 
+{
+    $uri = urldecode($uri);
+    $uri_segments = explode('/', trim($uri, '/'));
+
+    if (isset($routes[$method])) 
+    {
+        foreach ($routes[$method] as $route =&gt; $handler) {
+            $route_segments = explode('/', trim($route, '/'));
+            $params = [];
+        
+            if (count($uri_segments) === count($route_segments)) 
+            {
+                $match = true;
+                for ($i = 0; $i &lt; count($uri_segments); $i++) 
+                {
+                    if ($route_segments[$i][0] === '{' &amp;&amp; substr($route_segments[$i], -1) === '}') 
+                    {
+                        $params[] = $uri_segments[$i];
+                    } 
+                    elseif ($uri_segments[$i] !== $route_segments[$i]) 
+                    {
+                        $match = false;
+                        break;
+                    }
+                }
+            
+                if ($match) 
+                {
+                    call_user_func_array($handler, $params);
+                    return;
+                }
+            }
+        }
+    }
+}
+            </code></pre>
+            </details>
+        </p>
+    </body>
+</html>

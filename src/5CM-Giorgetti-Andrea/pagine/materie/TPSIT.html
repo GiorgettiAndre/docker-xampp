@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>TPSIT</title>
+
+    </head>
+    <body>
+        <a href="../../PaginaPrincipale.html">home</a>
+        <h1>TPIST</h1>
+        <p>
+            Quest’anno il macro-argomento che abbiamo affrontato è stato <b>Android</b>, sia dal punto di vista teorico che pratico, con lo sviluppo di applicazioni. Android è un      <br>
+            sistema operativo basato sul <b>kernel Linux</b>, inizialmente sviluppato da una startup omonima e poi acquistato da Google nel 2005. Le sue caratteristiche principali,    <br>
+            tra cui leggerezza, praticità e il fatto di essere open-source, lo rendono oggi il sistema operativo mobile più diffuso al mondo.                                           <br>
+            Abbiamo studiato la sua <b>architettura a strati</b>, dove ogni livello ha una funzione specifica: lo strato più basso interagisce con l’hardware, mentre quello più alto   <br>
+            si interfaccia con l’utente.                                                                                                                                                <br>
+            <img src="../../immagini/android.jpg" width="30%">
+            <ol>
+                <li>
+                    <b>Linux Kernel</b>: contiene i driver fondamentali per gestire e far comunicare l’hardware del dispositivo.
+                </li>
+                <li>
+                    <b>Librerie</b>: include librerie C/C++ per la gestione di dati e media, come <b>SQLite</b> per database locali e il <b>Media-Framework</b> per la gestione di      <br>
+                    audio e video.                                                                                                                                                      <br>
+                </li>
+                <li>
+                    <b>Android Runtime</b>: contiene le core-libraries Java e la <b>Dalvik Virtual Machine (DVM)</b>, un compilatore <em>just in time</em> che elabora codice Java      <br>
+                    durante l’esecuzione. A differenza della JVM classica del PC, qui si usa il bytecode .dex e l’eseguibile finale è un <code>.apk</code>, l’equivalente del <code>.jar</code>. <br>
+                    <img src="../../immagini/JVM&DVM.png" width="30%">
+                </li>
+                <li>
+                    <b>App Framework</b>: fornisce le API e i componenti fondamentali per sviluppare un’app, come la gestione delle <b>Activity</b> (le schermate interattive            <br>
+                    dell’app).Ogni activity ha dei metodi specifici legati al ciclo di vita, ad esempio <code>onCreate()</code>, <code>onPause()</code>, <code>onResume()</code>.        <br>
+                    <img src="../../immagini/androidactivity.jpg" width="30%">
+                </li>
+                <li>
+                    <b>Application</b>: è il livello più visibile, quello in cui l’utente interagisce con l’interfaccia e le funzionalità messe a disposizione dagli altri strati.
+                </li>
+            </ol>
+        </p>
+    </body>
+</html>

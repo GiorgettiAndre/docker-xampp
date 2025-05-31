@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>Matematica</title>
+
+        <!-- MathJax per usare le formule -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    </head>
+    <body>
+        <a href="../../PaginaPrincipale.html">home</a>
+        <h1>Matematica</h1>
+        <p>
+            Quest'anno l'argomento che mi e' piaciuto di piu, tra tutti, e' la funzione a 2 variabili, dove in particolare abbiamo visto il dominio, le linee di livello e la ricerca <br>
+            dei punti min, max e sella:
+            <ol>
+                <li><b>Dominio:</b> insieme dei punti \((x, y)\) per cui la funzione \(f(x, y)\) è definita. <br>
+                    Ad esempio, la funzione \(f(x, y) = \sqrt{x^2 + y^2}\) ha dominio tutto \(\mathbb{R}^2\), oppure La funzione \(f(x, y) = \dfrac{1}{x - y}\) <br>
+                    <b>non</b> è definita lungo la retta \(x = y\), quindi il dominio è tutto \(\mathbb{R}^2\) tranne in \(\{(x, y) \mid x = y\}\).
+                </li><br>
+            
+                <li><b>Linee di livello:</b> sono le curve in cui la funzione assume lo stesso valore, cioè l'insieme dei punti \((x, y)\) tali che \(f(x, y) = k\), con \(k \in \mathbb{R}\). <br>
+                        Per esempio, se \(f(x, y) = x^2 + y^2\), le linee di livello sono cerchi concentrici: \(x^2 + y^2 = k\), ovvero una circonferenza <br>
+                        di centro \(C(0, 0)\) e raggio = \(k\).
+                </li><br>
+            
+                <li><b>Punti min, max e sella:</b> si trovano cercando i punti critici, ovvero dove \(\nabla f(x, y) = 0\). <br>
+                    Poi si usa il discriminante \(D =\nabla\nabla f_{xx}\nabla\nabla f_{yy} - (\nabla\nabla f_{xy})^2\) per determinare la natura del punto critico sostituendo <br>
+                    i valori \(x\) e \(y\) per ogni punto critico nelle formule:
+                    <ul>
+                        <li>Se \(D > 0\) e \(f_{xx} > 0\): minimo locale.</li>
+                        <li>Se \(D > 0\) e \(f_{xx} < 0\): massimo locale.</li>
+                        <li>Se \(D < 0\): punto di sella.</li>
+                        <li>Se \(D = 0\): punto senza significato.</li>
+                    </ul>
+                </li>
+            </ol>
+        </p>
+    </body>
+</html>

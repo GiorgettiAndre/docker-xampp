@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>IA</title>
+
+        <!-- MathJax per usare le formule -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    </head>
+    <body>
+        <a href="../../PaginaPrincipale.html">home</a>
+        <h1>Intelligenza artificiale</h1>
+        <p>
+            Questa è sicuramente una delle materie più particolari e innovative che abbiamo affrontato, perché tratta argomenti di grande attualità e in continua evoluzione. Non si tratta         <br>
+            ancora di una materia ufficialmente istituzionalizzata, e infatti la nostra scuola è tra le prime in Italia ad averla introdotta all'interno del percorso di informatica. In            <br>
+            questo corso studiamo l'intelligenza artificiale sia da un punto di vista teorico che pratico, utilizzando principalmente il linguaggio Python.                                         <br>
+            Uno degli argomenti più affascinanti che abbiamo approfondito è la rete neurale artificiale, che costituisce la base di funzionamento dei cosiddetti “bot intelligenti”, un po'         <br>
+            come i neuroni nel cervello umano. Una rete neurale è composta da neuroni artificiali (o perceptron), ognuno dei quali è una sorta di "unità di calcolo" che somma gli input ricevuti,  <br>
+            ognuno pesato con un certo valore, e li elabora attraverso una funzione chiamata funzione di attivazione.                                                                               <br>
+            <img src="../../immagini/neurone.png" alt="esempio di un percettrone" width="30%">
+            <img src="../../immagini/funzionediattivazione.jpg" alt="funzione di attivazione" width="30%"><br>                                                                                      <br>
+            Come si può vedere dalla prima immagine, un neurone è composto da:
+            <ol>
+                <li>Gli input \(x\) (in genere booleani come 0 o 1), che rappresentano i dati da elaborare in base al problema affrontato dalla rete.</li>
+                <li>I pesi \(w\), cioè dei numeri reali che modulano l'importanza di ogni input, questi pesi vengono scelti durante l'addestramento o a mano o tramite il meccanismo <br>
+                della error back-propagation, tramite la derivazione delle funzioni e la discesa del gradiente.</li>
+                <li>Il bias Ø, che serve a regolare la soglia della funzione di attivazione, spostando il punto di attivazione verso l'alto o verso il basso.</li>
+                <li>La funzione di attivazione \(\varphi\), che trasforma il risultato numerico della somma pesata in un valore di output, spesso booleano o normalizzato. di solito <br>
+                si utilizzano particolari funzioni(sigmoide) e non un gradino steccato(come la seconda immagine, usata per praticita') che, non essendo derivabile, non permette     <br>
+                l'utilizzo della error back-propagation.</li>
+            </ol>
+            In sintesi, il comportamento matematico di un neurone artificiale può essere descritto con la formula:                                                                                  <br>
+            \( y_k = \varphi\left( \sum_{j=0}^{m} w_{kj} x_j \right) \)                                                                                                                             <br>
+            Questo modello è detto “caricaturale” ed è stato proposto per la prima volta nel 1943 da McCulloch e Pitts, durante lo studio del funzionamento dei neuroni biologici.                  <br>
+            Successivamente, nel 1957, Rosenblatt ha sviluppato un primo classificatore automatico basato su questo modello, chiamato percettrone, ispirandosi al funzionamento della corteccia     <br>
+            visiva.
+        </p>
+
+
+    </body>
+</html>
